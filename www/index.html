@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * udata: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src *; media-src *; img-src * data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+          <link rel="stylesheet"
+          href="css/material-components-web.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Pawsome</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class='screen-container'>
+                <div class="screen"></div>
+                <div class="screen-content">
+                    <img src="" id="screen-img">
+<!--                     <div class="screen-content-upper">
+                        Now Playing
+                    </div> -->
+                   
+                    <div class="vid-info">
+  <!--                       <img class="channelPic" src="img/avatar.jpg"> -->
+                        <h2 id="videoTitle">One really pawsome cat video</h2>
+                        <div class="channelInfo">
+                            <h3>by FueledByRamen </h3>
+<!--                             <div id="subscribe">
+                                <img src="img/little.png">
+                                Subscribe
+                            </div> -->
+                        </div>
+                    </div>
+                     <div class="button-section">
+                        <div class="border"></div>
+                        <div id="pause-play" class="mobile-button">
+                            <img id="pause" src="img/pausebutton@2x.png">
+                        </div>
+                        <div id="subscribe" class="mobile-button">
+                            <img id="subscribe" src="img/subscribebutton@2x.png">
+                        </div>
+                        <div id="like" class="mobile-button">
+                            <img id="like" src="img/likebutton@2x.png">
+                        </div>
+                    </div>
+                    <div class="comment-section">
+                        <div class="comment">
+                            <div class="comment-pic">
+                                <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=jpg"></a>
+                            </div>
+                            <input type="text" class="comment-input" placeholder="Share a claw-ment...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header">
+                <img src="img/pawprint.png">
+            </div>
+            <div id="deviceready" class="results">
+            <!-- <div id='1' class='thumbnail'><img src='http://www.hometownstation.com/wp-content/uploads/2017/04/ztszfb_lavg.jpg'><h2> What a fantastic cat video man, it's the </h2><h3> by FrannyThai</h3></div> -->
+                
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyAyUv1FMstS07W8Y9OahF8ISxfKhbw4dwc",
+            authDomain: "pawsomecats-170520.firebaseapp.com",
+            databaseURL: "https://pawsomecats-170520.firebaseio.com",
+            projectId: "pawsomecats-170520",
+            storageBucket: "pawsomecats-170520.appspot.com",
+            messagingSenderId: "914489509649"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="material-components-web/dist/material-components-web.js"></script>
+        <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+
+
+    </body>
+</html>
